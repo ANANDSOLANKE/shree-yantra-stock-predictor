@@ -4,19 +4,71 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Shree Yantra Stock Predictor</title>
+  <meta name="description" content="Vedic-themed stock predictor with real OHLC data, autocomplete, and trending.">
   <link rel="stylesheet" href="/static/style.css">
+  <link rel="icon" type="image/svg+xml" href="https://upload.wikimedia.org/wikipedia/commons/5/5a/Shree_Yantra.svg">
 </head>
 <body>
-  <div class="wrap">
-    <h1>Shree Yantra <span>Stock Predictor</span></h1>
-    <p>Type a company or ticker (e.g., Tata Motors, RELIANCE.NS, AAPL):</p>
-    <div class="row">
-      <input id="ticker" placeholder="Type company or ticker…">
-      <button id="go">Predict</button>
+  <header class="site-header">
+    <div class="wrap header-row">
+      <div class="brand">
+        <img class="logo" src="https://upload.wikimedia.org/wikipedia/commons/5/5a/Shree_Yantra.svg" alt="Yantra">
+        <div>
+          <h1>Shree Yantra <span>Stock Predictor</span></h1>
+          <p class="tag">Vedic-inspired signals • Real OHLC • Free</p>
+        </div>
+      </div>
+      <div class="ad ad-hdr"><!-- Ad: Header Leaderboard --></div>
     </div>
-    <div id="suggestBox" class="suggest hidden" role="listbox" aria-label="Suggestions"></div>
-    <pre id="out"></pre>
+  </header>
+
+  <main class="wrap grid">
+    <section class="panel">
+      <h2 class="hero-title">Find a stock. See today's OHLC and a mystical hint for tomorrow.</h2>
+
+      <div class="search-stack">
+        <div class="row">
+          <input id="ticker" placeholder="Type company or ticker (e.g., Tata Motors, RELIANCE.NS, AAPL)">
+          <button id="go" class="btn">Analyze</button>
+        </div>
+        <div id="suggestBox" class="suggest hidden" role="listbox" aria-label="Suggestions"></div>
+      </div>
+
+      <div class="ad ad-incontent"><!-- Ad: In Content --></div>
+
+      <div id="card" class="card hidden" aria-live="polite">
+        <div class="card-head">
+          <h3 id="cTicker">—</h3>
+          <div id="cSignal" class="chip">Awaiting…</div>
+        </div>
+        <div class="ohlc">
+          <div class="kv"><span>Open</span><strong id="cOpen">—</strong></div>
+          <div class="kv"><span>High</span><strong id="cHigh">—</strong></div>
+          <div class="kv"><span>Low</span><strong id="cLow">—</strong></div>
+          <div class="kv"><span>Close</span><strong id="cClose">—</strong></div>
+        </div>
+        <div class="pred-note" id="predNote">Prediction For Next Day: —</div>
+      </div>
+    </section>
+
+    <aside class="side">
+      <div class="ad ad-side"><!-- Ad: Sidebar 300x250 --></div>
+      <div class="card trending">
+        <div class="card-head"><h3>🔥 Trending</h3></div>
+        <ul id="trendList" class="trend-list"><li>Loading…</li></ul>
+      </div>
+      <div class="ad ad-side-tall"><!-- Ad: Sidebar 300x600 --></div>
+    </aside>
+  </main>
+
+  <div class="sticky-ad">
+    <div class="wrap"><div class="ad ad-sticky"><!-- Ad: Sticky Footer --></div></div>
   </div>
+
+  <footer class="wrap footer">
+    <p>© 2025 Shree Yantra • Signals are informational only • <a href="#">Disclaimer</a></p>
+  </footer>
+
   <script src="/static/script.js"></script>
 </body>
 </html>
