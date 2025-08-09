@@ -1,0 +1,13 @@
+body{font-family:system-ui,Segoe UI,Roboto,Arial;background:#0c1021;color:#e7ecff;margin:0}
+.wrap{max-width:800px;margin:0 auto;padding:24px}
+h1{font-size:24px;margin:0 0 6px} h1 span{color:#ffd166}
+.row{display:flex;gap:8px;margin:10px 0}
+input{flex:1;padding:10px;border-radius:8px;border:1px solid #2a355a;background:#0b1026;color:#e7ecff}
+button{padding:10px 14px;border-radius:8px;border:0;background:#ffd166;color:#1a1300;font-weight:700;cursor:pointer}
+pre{background:#0b1026;border:1px solid #223051;border-radius:12px;padding:12px;min-height:80px}
+.suggest{background:#0b1026;border:1px solid #223051;border-radius:10px;margin-top:6px;max-height:260px;overflow:auto}
+.suggest.hidden{display:none}
+.suggest-item{padding:10px 12px;cursor:pointer;display:flex;justify-content:space-between;gap:12px}
+.suggest-item:hover,.suggest-item.active{background:#141b3a}
+.suggest-item .left{font-weight:600}
+.suggest-item .right{color:#9db0e0;font-size:12px}

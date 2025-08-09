@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Shree Yantra Stock Predictor</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <div class="wrap">
+    <h1>Shree Yantra <span>Stock Predictor</span></h1>
+    <p>Type a company or ticker (e.g., Tata Motors, RELIANCE.NS, AAPL):</p>
+    <div class="row">
+      <input id="ticker" placeholder="Type company or ticker…">
+      <button id="go">Predict</button>
+    </div>
+    <div id="suggestBox" class="suggest hidden" role="listbox" aria-label="Suggestions"></div>
+    <pre id="out"></pre>
+  </div>
+  <script src="/static/script.js"></script>
+</body>
+</html>
